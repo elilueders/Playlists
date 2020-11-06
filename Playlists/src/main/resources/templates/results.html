@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>View All Songs</title>
+</head>
+<body>
+	<form>
+		<table>
+			<tr>
+				<th>ID</th>
+				<th>TITLE</th>
+				<th>ARTIST</th>
+				<th>ALBUM</th>
+			</tr>
+			<tr th:each="currentSong:${songs}">
+				<td th:text="${currentSong.id}" />
+				<td th:text="${currentSong.title}" />
+				<td th:text="${currentSong.artist}" />
+				<td th:text="${currentSong.album}" />
+				<td><a th:href="@{/edit/{id}(id=${currentSong.id})}">edit</a></td>
+				<td><a th:href="@{/delete/{id}(id=${currentSong.id})}">delete</a></td>
+			</tr>
+		</table>
+	</form>
+	<a href="../inputSong">Add New Song</a>
+</body>
+</html>
