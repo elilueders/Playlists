@@ -3,8 +3,12 @@
 <head>
 <meta charset="UTF-8">
 <title>View All Songs</title>
+<link rel="stylesheet" th:href="@{/css/styles.css}">
 </head>
 <body>
+	<header>
+		<h1>All Songs</h1>
+	</header>
 	<form>
 		<table>
 			<tr>
@@ -12,6 +16,8 @@
 				<th>TITLE</th>
 				<th>ARTIST</th>
 				<th>ALBUM</th>
+				<th></th>
+				<th></th>
 			</tr>
 			<tr th:each="currentSong:${songs}">
 				<td th:text="${currentSong.id}" />

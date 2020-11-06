@@ -1,0 +1,33 @@
+@charset "UTF-8";
+
+
+
+body {
+	font-family : sans-serif;
+	background-color: #94e7f9;
+	font-family: sans-serif;
+}
+
+table {
+	border-collapse: collapse;
+	border: 2px solid black;
+	margin: 10px;
+}
+
+th {
+	background-color: black;
+	color: #94e7f9;
+	padding: 5px;
+}
+
+td {
+	border: 2px solid black;
+	padding: 5px;
+}
+
+table button {
+	color: red;
+	background-color: black;
+	width: 60px;
+}
+

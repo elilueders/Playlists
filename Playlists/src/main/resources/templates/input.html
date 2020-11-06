@@ -2,18 +2,25 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
 <meta charset="UTF-8">
-<title>Song Input Form</title>
+<title>Song Input</title>
+<link rel="stylesheet" th:href="@{/css/styles.css}">
 </head>
 <body>
-	<form th:object="${newSong}" th:action="@{/update/{id}(id=${newSong.id})}" method='POST' autocomplete="off">
-		<label for="title">title</label><br>
-		<input id="title" name="title" size="20" th:field="*{title}"><br><br>
-		<label for="artist">artist</label><br>
-		<input id="artist" name="artist" size="20" th:field="*{artist}"><br><br>
-		<label for="album">album</label><br>
-		<input id="album" name="album" size="20" th:field="*{album}"><br><br>
+	<header>
+		<h1>Song Input</h1>
+	</header>
+	<form th:object="${newSong}"
+		th:action="@{/update/{id}(id=${newSong.id})}" method='POST'
+		autocomplete="off">
+		<label for="title">title</label><br> <input id="title"
+			name="title" size="20" th:field="*{title}"><br> <br>
+		<label for="artist">artist</label><br> <input id="artist"
+			name="artist" size="20" th:field="*{artist}"><br> <br>
+		<label for="album">album</label><br> <input id="album"
+			name="album" size="20" th:field="*{album}"><br> <br>
 		<input name="submit" type="submit" value="submit"><br>
 	</form>
-<a href="viewAll">View All Songs</a>
+	<br><br>
+	<a href="viewAll">View All Songs</a>
 </body>
 </html>
